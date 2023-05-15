@@ -20,12 +20,12 @@ $ npm run watch
 
 
 ## Hvordan kan man bruke client-blueprint-vue3 i WP plugin
-1. Klone dette repoet i hovedmape i plugin
-2. Endre navn av **mappe client-blueprint-vue3** til **klient**
-3. Lage pekere til JS og CSS (se Eksempel: pekere til JS og CSS fra WP plugin)
+1. Klone repoet
+```bash
+$ git clone https://github.com/UKMNorge/client-blueprint-vue3 klient
+```
 
-
-#### Eksempel: pekere til JS og CSS fra WP plugin
+2. Lage pekere til JS og CSS
 ```php
 // I hovedfilen av WP plugin
 
