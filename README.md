@@ -42,3 +42,8 @@ $ cd client
 # Slett .git mappe og .gitignore fil
 $ rm -r .git .gitignore
 ```
+
+
+
+### src_example
+Bruk src_example mappe for å komme i gang og for å se hvordan kompontenter kan importeres
