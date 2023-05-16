@@ -43,6 +43,13 @@ $ cd client
 $ rm -r .git .gitignore
 ```
 
+4. Legg til koden på html kode på hoved twig eller html fil
+
+```html
+<div id="app">
+
+</div>
+```
 
 
 ### src_example
