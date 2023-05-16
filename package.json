@@ -14,8 +14,10 @@
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
     "prettier": "^2.8.4",
+    "jquery": "^3.6.1",
+    "ukm-components-vue3": "^1.0.0",
     "prettier-plugin-tailwindcss": "^0.2.2",
-    "ukm-components-vue": "^0.1.1",
+    "ukm-spa": "^1.0.9",
     "vue": "^3.2.47"
   },
   "devDependencies": {
