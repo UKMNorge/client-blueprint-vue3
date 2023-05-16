@@ -5,8 +5,10 @@
 </template>
 <script lang="ts">
 import MyObject from './../objects/myObject'
+import MainComponent from './MainComponent.vue';
 
 export default {
+    extends : MainComponent,
     props: {
         title: String,
     },
@@ -21,6 +23,9 @@ export default {
             console.log('ChildComponent.vue: init()');
             var myObjMethod = this.myObject.sayHello();
             console.log('From MyObject: ' + myObjMethod);
+            
+            // Kall super kompontent
+            this.IaMsuperMethod();
         }
     }
 }
