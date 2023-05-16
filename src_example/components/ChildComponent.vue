@@ -1,20 +1,28 @@
 <template>
   <div>
-    <h1>Child component</h1> 
+    <h4>Child component with title: {{ title }} (ChildComponent.vue)</h4> 
   </div>
 </template>
-<script setup lang="ts">
-  import MyObject from './../objects/myObject'
+<script lang="ts">
+import MyObject from './../objects/myObject'
 
-  var myObject = new MyObject();
+export default {
+    props: {
+        title: String,
+    },
+    data() {
+        return {
 
-  // Make it accessable through ref
-  defineExpose({ init });
-  
-  function init(){
-    console.log('ChildComponent.vue: init()');
+            myObject : new MyObject()
+        }
+    },
+    methods : {
+        init(){
+            console.log('ChildComponent.vue: init()');
+            var myObjMethod = this.myObject.sayHello();
+            console.log('From MyObject: ' + myObjMethod);
+        }
+    }
+}
 
-    var myObjMethod = myObject.sayHello();
-    console.log('From MyObject: ' + myObjMethod);
-  }
 </script>

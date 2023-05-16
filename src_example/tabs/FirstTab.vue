@@ -1,25 +1,42 @@
-<template>
+<template> 
     <div>
-        <h1>First Tab</h1>
-        <ChildComponent ref="childArrangementer" />
-        
-        <h2>Fra UKM Komponenter</h2>
-        <UKMTable msg='Hello Table test' color="red" />
+        <div v-show="active == true">
+            <h1>First Tab (FirstTab.vue)</h1>
+            <ChildComponent ref="childArrangementer" :title="'Alfa'" />
+            <ChildComponent ref="childArrangementer2" :title="'Beta'" />
+            <h2>Fra UKM Komponenter</h2>
+            <UKMTable msg='Hello Table test' color="red" />
+
+        </div>
+        <p>active: {{ active }}</p>
+        <button @click="setActive()">show</button>
+        <button @click="setDeactive()">hide</button>
 
     </div>
 </template>
   
-<script setup lang="ts">
-    import ChildComponent from '../components/ChildComponent.vue';
-    import { ref, onMounted } from 'vue';
-    // Import fra UKM Komponenter
-    import { UKMTable } from 'ukm-components-vue3';
+<script lang="ts">
+import ChildComponent from '../components/ChildComponent.vue';
 
-    const childArrangementer = ref();
-    
-    onMounted(() => {
-        console.log('FirstTab.vue:  onMounted()');
-        childArrangementer.value.init();
+export default {
+    data() {
+        return {
+            active: false
+        }
+    },
 
-    });
+    components : {
+        ChildComponent : ChildComponent
+    },
+
+    methods : {
+        setActive() {
+            this.active = true;
+            console.log(this.$refs)
+        },
+        setDeactive() {
+            this.active = false;
+        }
+    }
+}
 </script>
