@@ -22,13 +22,23 @@ $ npm run watch
 ## Hvordan kan man bruke client-blueprint-vue3 i WP plugin
 1. Klone repoet
 ```bash
-$ git clone https://github.com/UKMNorge/client-blueprint-vue3 klient
+$ git clone https://github.com/UKMNorge/client-blueprint-vue3 client
 ```
 
 2. Lage pekere til JS og CSS
 ```php
 // I hovedfilen av WP plugin
 
-wp_enqueue_style('UKMstatistikkVueStyle', plugin_dir_url(__FILE__) . '/klient/dist/assets/build.css');
-wp_enqueue_script('UKMstatistikkVueJs', plugin_dir_url(__FILE__) . '/klient/dist/assets/build.js','','',true);
+wp_enqueue_style('UKMstatistikkVueStyle', plugin_dir_url(__FILE__) . '/client/dist/assets/build.css');
+wp_enqueue_script('UKMstatistikkVueJs', plugin_dir_url(__FILE__) . '/client/dist/assets/build.js','','',true);
+```
+
+VIKTIG!
+3. Fjern .git mappe og .gitignore fil slik at repo fra WP plugin kan ta med endringer i client mappe
+```bach
+# Naviger til client
+$ cd client
+
+# Slett .git mappe og .gitignore fil
+$ rm -r .git .gitignore
 ```
