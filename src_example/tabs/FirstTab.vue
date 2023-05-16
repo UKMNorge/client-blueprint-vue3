@@ -17,6 +17,10 @@
   
 <script lang="ts">
 import ChildComponent from '../components/ChildComponent.vue';
+// Fra pakke UKM Komponenter
+import { UKMTable } from 'ukm-components-vue3';
+        
+
 
 export default {
     data() {
@@ -26,13 +30,15 @@ export default {
     },
 
     components : {
-        ChildComponent : ChildComponent
+        ChildComponent : ChildComponent,
+        UKMTable : UKMTable,
     },
 
     methods : {
         setActive() {
             this.active = true;
-            console.log(this.$refs)
+            console.log(this.$refs);
+            (<typeof ChildComponent>this.$refs.childArrangementer).init();
         },
         setDeactive() {
             this.active = false;
