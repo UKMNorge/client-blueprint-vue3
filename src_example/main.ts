@@ -14,6 +14,13 @@ hljs.registerLanguage("css", css);
 
 const app = createApp(App);
 
+// Make Director global
+import { Director } from 'ukm-spa/Director';
+
+var director = new Director();
+(<any>window).director = director;
+
+
 app.use(hljsVuePlugin);
 
 app.mount("#app");
