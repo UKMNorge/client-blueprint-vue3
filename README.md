@@ -54,3 +54,15 @@ $ rm -r .git .gitignore
 
 ### src_example
 Bruk src_example mappe for å komme i gang og for å se hvordan kompontenter kan importeres
+
+
+# All Components
+### Permanent Notification
+```vue
+<PermanentNotification v-if="isFilteringActive" :typeNotification="'warning'" :tittel="'Beskjed'" :description="'Beskrivelse'" />
+```
+
+![Screenshot 2024-02-22 at 15 35 25](https://github.com/UKMNorge/client-blueprint-vue3/assets/10181004/8a0f4ae3-d507-4b2b-b028-f6b80cd7950a)
+
+
+
