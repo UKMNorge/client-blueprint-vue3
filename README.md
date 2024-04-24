@@ -39,8 +39,8 @@ VIKTIG!
 # Naviger til client
 $ cd client
 
-# Slett .git mappe og .gitignore fil
-$ rm -r .git .gitignore
+# Slett .git mappe og
+$ rm -r .git
 ```
 
 4. Legg til koden på html kode på hoved twig eller html fil
