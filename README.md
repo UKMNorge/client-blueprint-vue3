@@ -55,4 +55,25 @@ $ rm -r .git
 ### src_example
 Bruk src_example mappe for å komme i gang og for å se hvordan kompontenter kan importeres
 
+#### Bruk av SPAInteraction
+```typescript
+export default {
+    data() {
+        return {
+            spaInteraction : (<any>window).spaInteraction, // Definert i main.ts
 
+        }
+    },
+    methods: {
+        async getInitialData() {
+            var data : any = {
+                action: 'UKMSMS_ajax',
+                SMSaction: 'getInitialData',
+            };
+
+            var response = await this.spaInteraction.runAjaxCall('/', 'POST', data);
+            var response = await this.spaInteraction.runAjaxCall('/', 'POST', data, true); // Silent, viser ikke feilmeldinger til brukeren
+        }
+    }
+}
+```
