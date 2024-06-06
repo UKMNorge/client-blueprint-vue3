@@ -5,7 +5,6 @@
             <ChildComponent ref="childArrangementer" :title="'Alfa'" />
             <ChildComponent ref="childArrangementer2" :title="'Beta'" />
             <h2>Fra UKM Komponenter</h2>
-            <UKMTable msg='Hello Table test' color="red" />
 
         </div>
         <p>active: {{ active }}</p>
@@ -16,11 +15,7 @@
 </template>
   
 <script lang="ts">
-import ChildComponent from '../components/ChildComponent.vue';
-// Fra pakke UKM Komponenter
-import { UKMTable } from 'ukm-components-vue3';
-        
-
+import ChildComponent from '../components/ChildComponent.vue';        
 
 export default {
     data() {
@@ -31,7 +26,7 @@ export default {
 
     components : {
         ChildComponent : ChildComponent,
-        UKMTable : UKMTable,
+
     },
 
     methods : {
